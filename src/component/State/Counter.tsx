@@ -3,20 +3,15 @@ import { useReducer } from "react"
 type CounterState = {
     count: number
 }
-
 type ResetAction = {
     type: 'reset'
 }
-
 type UpdateAction = {
     type: 'increment' | 'decrement',
     payload: number
 }
-
 type CounterAction = UpdateAction | ResetAction
-
 const initialState = { count: 0 }
-
 function reducer(state: CounterState, action: CounterAction) {
     switch (action.type) {
         case 'increment':
